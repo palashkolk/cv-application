@@ -1,0 +1,161 @@
+/* --- Layout Components --- */
+.app-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px 0;
+  color: var(--accent-color);
+  font-size: 2.5rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* --- Edit Mode Styles --- */
+.cv-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cv-section {
+  background: var(--panel-color);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.cv-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 8px;
+  color: var(--accent-color);
+}
+
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edit-mode input,
+.edit-mode textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.edit-mode input:focus,
+.edit-mode textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.edit-mode textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* --- Interactive Control Buttons --- */
+.controls {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.btn-toggle {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  box-shadow: var(--shadow);
+}
+
+.btn-toggle:active {
+  transform: scale(0.98);
+}
+
+.btn-submit {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-edit {
+  background-color: #475569;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #334155;
+}
+
+/* --- Document Preview Styles --- */
+.cv-preview-container {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-height: 297mm; /* Approximates vertical length of A4 paper sheet */
+  box-sizing: border-box;
+}
+
+/* Removes box parameters to blend separate modules inside unified canvas */
+.cv-preview-container .cv-section {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 28px;
+  border-radius: 0;
+}
+
+.cv-preview-container .cv-section:first-of-type h2 {
+  display: none; /* Auto-hides standard section title header for contact segment */
+}
+
+.cv-preview-container h2 {
+  color: #1a202c;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #1a202c;
+  margin-bottom: 12px;
+}
+
+.cv-preview-container h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.2rem;
+  color: #1a202c;
+}
+
+.cv-preview-container p {
+  margin: 0 0 8px 0;
+  color: #4a5568;
+}
+
+.cv-preview-container em {
+  color: var(--text-muted);
+}
