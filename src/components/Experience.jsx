@@ -20,7 +20,7 @@ function Experience({ data, setData, isSubmitted }) {
         <section className="cv-section-form">
             <h2>Experience</h2>
             <div className="input-group">
-                <label htmlFor="name">Company</label>
+                <label htmlFor="company">Company</label>
                 <input
                     type="text"
                     id="company"
@@ -30,7 +30,7 @@ function Experience({ data, setData, isSubmitted }) {
                     placeholder="Microsoft"  />
             </div>
             <div className="input-group">
-                <label htmlFor="email">Position</label>
+                <label htmlFor="position">Position</label>
                 <input
                     type="text"
                     id="position"
@@ -40,17 +40,17 @@ function Experience({ data, setData, isSubmitted }) {
                     placeholder="Manager"  />
             </div>
             <div className="input-group">
-                <label htmlFor="phone">Responsibilities</label>
+                <label htmlFor="responsibilities">Responsibilities</label>
                 <input
                     type="text"
-                    id="reponsibilities"
-                    name="reponsibilities"
-                    value={data.responsiblities}
+                    id="responsibilities"
+                    name="responsibilities"
+                    value={data.responsibilities}
                     onChange={handleChange}
                     placeholder="Dictating orders"  />
             </div>
             <div className="input-group">
-                <label htmlFor="phone">Date</label>
+                <label htmlFor="date">Date</label>
                 <input
                     type="date"
                     id="date"
